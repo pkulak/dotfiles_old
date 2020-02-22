@@ -197,20 +197,13 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-    status_command i3status
-    position bottom
+#########################
+# All my stuff below here
+#########################
 
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
+exec waybar
+exec flashfocus
+bindsym $mod+n exec flash_window
 
 # Notifications
 exec mako
@@ -231,13 +224,6 @@ for_window [instance="telegram"] resize set 350 600
 for_window [instance="telegram"] move scratchpad
 for_window [instance="telegram"] border pixel 5
 exec telegram-desktop -n telegram
-
-# Spotify
-for_window [instance="spotify"] floating enable
-for_window [instance="spotify"] resize set 600 300
-for_window [instance="spotify"] move scratchpad
-for_window [instance="spotify"] border pixel 5
-exec $term -n spotify -e spt
 
 xwayland enabled
 
