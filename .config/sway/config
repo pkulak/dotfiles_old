@@ -201,7 +201,10 @@ bindsym $mod+r mode "resize"
 # All my stuff below here
 #########################
 
-exec waybar
+bar {
+    swaybar_command waybar
+}
+
 exec flashfocus
 bindsym $mod+n exec flash_window
 
