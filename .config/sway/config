@@ -225,6 +225,11 @@ for_window [instance="telegram"] move scratchpad
 for_window [instance="telegram"] border pixel 5
 exec telegram-desktop -n telegram
 
+# Sublime Merge
+for_window [app_id="sublime_merge"] floating enable
+for_window [app_id="sublime_merge"] resize set 1440 1024
+for_window [app_id="sublime_merge"] border pixel 5
+
 xwayland enabled
 
 output Virtual-1 pos 0 0 res 1920x1440
