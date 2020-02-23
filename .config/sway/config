@@ -205,10 +205,6 @@ bar {
     swaybar_command waybar
 }
 
-exec killall flashfocus
-exec flashfocus
-bindsym $mod+n exec flash_window
-
 # Notifications
 exec mako
 bindsym Control+Space exec makoctl dismiss

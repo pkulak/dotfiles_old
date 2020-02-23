@@ -60,11 +60,6 @@ window#waybar.chromium {
     background-color: #eb4d4b;
 }
 
-#mode {
-    background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
-}
-
 #clock,
 #battery,
 #cpu,
@@ -73,7 +68,7 @@ window#waybar.chromium {
 #backlight,
 #network,
 #pulseaudio,
-#custom-media,
+#custom-spotify,
 #tray,
 #mode,
 #idle_inhibitor,
@@ -81,6 +76,10 @@ window#waybar.chromium {
     padding: 0 15px;
     margin: 0 0 3 0px;
     color: #ffffff;
+}
+
+#mode {
+    background-color: #64727D;
 }
 
 #clock {
@@ -147,20 +146,6 @@ label:focus {
 #pulseaudio.muted {
     background-color: #90b1b1;
     color: #2a5c45;
-}
-
-#custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
 }
 
 #temperature {
