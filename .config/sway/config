@@ -205,6 +205,9 @@ bar {
     swaybar_command waybar
 }
 
+# Bindings
+bindsym $mod+Shift+Return exec firefox
+
 # Notifications
 exec mako
 bindsym Control+Space exec makoctl dismiss
