@@ -239,6 +239,9 @@ for_window [title="Popup Shell"] resize set 1280 720
 for_window [title="Popup Shell"] border pixel 5
 bindsym $mod+p exec $term -t "Popup Shell"
 
+# Intellij
+for_window [title="IntelliJ IDEA$"] move workspace 9
+
 xwayland enabled
 
 output Virtual-1 pos 0 0 res 1920x1440
