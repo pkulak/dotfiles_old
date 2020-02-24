@@ -18,7 +18,7 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu j4-dmenu-desktop --dmenu='bemenu -i -nb "#3f3f3f" --nf "#dcdccc" --fn "pango:DejaVu Sans Mono 12"' --term='termite'
+set $menu j4-dmenu-desktop --dmenu='bemenu -in -p "" -l 10 --hf "#2980b9" --nf "#2ecc71" --fn "pango:DejaVu Sans Mono 12"' --term='alacritty'
 
 ### Output configuration
 #
@@ -222,7 +222,6 @@ bindsym --locked XF86AudioNext exec playerctl next
 bindsym --locked XF86AudioPrev exec playerctl previous
 
 # Telegram
-# TODO: Try using Wayland and setting the app_id instead.
 for_window [instance="telegram"] floating enable
 for_window [instance="telegram"] resize set 350 600
 for_window [instance="telegram"] move scratchpad
