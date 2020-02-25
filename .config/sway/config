@@ -35,11 +35,11 @@ output * bg $HOME/.config/sway/bg.png fill
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' \
-#               resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 330 'swaymsg "output * dpms off"' \
+              resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -205,8 +205,17 @@ bar {
     swaybar_command waybar
 }
 
-# Bindings
-bindsym $mod+Shift+Return exec firefox
+# Input
+input 1149:8257:Kensington_Kensington_Slimblade_Trackball {
+    natural_scroll enabled
+    scroll_method on_button_down
+    scroll_button 275
+}
+
+# Clamshell Mode
+set $laptop 'Apple Computer Inc Color LCD 0x00000000'
+bindswitch --reload lid:on output $laptop disable
+bindswitch --reload lid:off output $laptop enable
 
 # Notifications
 exec mako
@@ -222,11 +231,12 @@ bindsym --locked XF86AudioNext exec playerctl next
 bindsym --locked XF86AudioPrev exec playerctl previous
 
 # Telegram
-for_window [instance="telegram"] floating enable
-for_window [instance="telegram"] resize set 350 600
-for_window [instance="telegram"] move scratchpad
-for_window [instance="telegram"] border pixel 5
-exec telegram-desktop -n telegram
+for_window [app_id="telegramdesktop"] floating enable
+for_window [app_id="telegramdesktop"] resize set 350 600
+for_window [app_id="telegramdesktop"] move scratchpad
+for_window [app_id="telegramdesktop"] border pixel 5
+exec telegram-desktop
+bindsym $mod+Shift+t [app_id="telegramdesktop"] scratchpad show
 
 # Sublime Merge
 for_window [app_id="sublime_merge"] floating enable
@@ -237,16 +247,14 @@ for_window [app_id="sublime_merge"] border pixel 5
 for_window [title="Popup Shell"] floating enable
 for_window [title="Popup Shell"] resize set 1280 720
 for_window [title="Popup Shell"] border pixel 5
-bindsym $mod+p exec $term -t "Popup Shell"
+bindsym $mod+Shift+Return exec $term -t "Popup Shell"
 
 # Intellij
 for_window [title="IntelliJ IDEA$"] move workspace 9
 
 xwayland enabled
 
-output Virtual-1 pos 0 0 res 1920x1440
-
-default_border pixel 2
+default_border pixel 3
 gaps inner 15
 gaps outer 5
 
