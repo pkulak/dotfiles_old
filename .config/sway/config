@@ -217,6 +217,9 @@ set $laptop 'Apple Computer Inc Color LCD 0x00000000'
 bindswitch --reload lid:on output $laptop disable
 bindswitch --reload lid:off output $laptop enable
 
+# Night Mode
+exec redshift -l 45:122 -t 4000:6500
+
 # Notifications
 exec mako
 bindsym Control+Space exec makoctl dismiss
@@ -229,14 +232,6 @@ bindsym --locked XF86AudioMute exec pactl set-sink-mute $(pacmd list-sinks |awk 
 bindsym --locked XF86AudioPlay exec playerctl play-pause
 bindsym --locked XF86AudioNext exec playerctl next
 bindsym --locked XF86AudioPrev exec playerctl previous
-
-# Telegram
-for_window [app_id="telegramdesktop"] floating enable
-for_window [app_id="telegramdesktop"] resize set 350 600
-for_window [app_id="telegramdesktop"] move scratchpad
-for_window [app_id="telegramdesktop"] border pixel 5
-exec telegram-desktop
-bindsym $mod+Shift+t [app_id="telegramdesktop"] scratchpad show
 
 # Sublime Merge
 for_window [app_id="sublime_merge"] floating enable
@@ -254,7 +249,7 @@ for_window [title="IntelliJ IDEA$"] move workspace 9
 
 xwayland enabled
 
-default_border pixel 3
+default_border pixel 5
 gaps inner 15
 gaps outer 5
 
