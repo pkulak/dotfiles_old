@@ -211,6 +211,9 @@ input 1149:8257:Kensington_Kensington_Slimblade_Trackball {
     scroll_button 275
 }
 
+# Focus on my main monitor
+workspace 1 output HDMI-A-1
+
 # Clamshell Mode
 set $laptop 'Apple Computer Inc Color LCD 0x00000000'
 bindswitch --reload lid:on output $laptop disable
