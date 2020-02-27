@@ -250,9 +250,6 @@ for_window [title="Popup Shell"] resize set 1280 720
 for_window [title="Popup Shell"] border pixel 5
 bindsym $mod+Shift+Return exec $term -t "Popup Shell"
 
-# Intellij
-for_window [title="IntelliJ IDEA$"] move workspace 9
-
 xwayland enabled
 
 default_border pixel 5
