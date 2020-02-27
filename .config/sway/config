@@ -15,10 +15,8 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term alacritty
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-set $menu j4-dmenu-desktop --dmenu='bemenu -in -p "" -l 10 --hf "#2980b9" --nf "#2ecc71" --fn "pango:DejaVu Sans Mono 12"' --term='alacritty'
+# Menu
+set $menu "rofi -p run -modi drun -show drun -display-drun 'search' -show-icons | xargs swaymsg exec --"
 
 ### Output configuration
 #
@@ -204,8 +202,14 @@ bar {
     swaybar_command waybar
 }
 
-# Input
+# Inputs
 input 1149:8257:Kensington_Kensington_Slimblade_Trackball {
+    natural_scroll enabled
+    scroll_method on_button_down
+    scroll_button 275
+}
+
+input 1149:8257:Kensington_Slimblade_Trackball {
     natural_scroll enabled
     scroll_method on_button_down
     scroll_button 275
