@@ -34,7 +34,7 @@ output * bg $HOME/.config/sway/bg.png fill
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
+         timeout 300 'swaylock -f -i $HOME/.config/sway/bg.png -s fill' \
          timeout 330 'swaymsg "output * dpms off"' \
               resume 'swaymsg "output * dpms on"'
 #
@@ -177,16 +177,16 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+    bindsym $left resize shrink width 25px
+    bindsym $down resize grow height 25px
+    bindsym $up resize shrink height 25px
+    bindsym $right resize grow width 25px
 
     # Ditto, with arrow keys
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
+    bindsym Left resize shrink width 25px
+    bindsym Down resize grow height 25px
+    bindsym Up resize shrink height 25px
+    bindsym Right resize grow width 25px
 
     # Return to default mode
     bindsym Return mode "default"
@@ -224,7 +224,10 @@ bindswitch --reload lid:on output $laptop disable
 bindswitch --reload lid:off output $laptop enable
 
 # Night Mode
-exec redshift -l 45:122 -t 4000:6500
+exec redshift 
+
+# Hide our cursor after a bit
+seat * hide_cursor 8000
 
 # Notifications
 exec mako
@@ -254,6 +257,5 @@ xwayland enabled
 
 default_border pixel 5
 gaps inner 15
-gaps outer 5
 
 include /etc/sway/config.d/*
