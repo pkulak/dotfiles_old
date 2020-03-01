@@ -10,7 +10,7 @@ function lsh
   sudo lxc exec "$argv" -- sudo --login --user phil
 end
 
-function config
-  /usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME $argv
+function cpass --wraps "pass"
+  pass "$argv" | head -1 | tr -d '\n' | wl-copy
 end
 
