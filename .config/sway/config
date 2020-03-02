@@ -265,4 +265,6 @@ xwayland enabled
 default_border pixel 5
 gaps inner 15
 
+focus_follows_mouse no
+
 include /etc/sway/config.d/*
