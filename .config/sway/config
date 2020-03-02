@@ -215,6 +215,13 @@ input 1149:8257:Kensington_Slimblade_Trackball {
     scroll_button 275
 }
 
+input type:touchpad {
+    natural_scroll enabled
+}
+
+# Outputs
+output eDP-1 scale 2
+
 # Focus on my main monitor
 workspace 1 output HDMI-A-1
 
