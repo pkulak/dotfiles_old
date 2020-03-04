@@ -36,7 +36,8 @@ output * bg $HOME/.config/sway/bg.png fill
 exec swayidle -w \
          timeout 300 'swaylock -f -i $HOME/.config/sway/bg.png -s fill' \
          timeout 330 'swaymsg "output * dpms off"' \
-              resume 'swaymsg "output * dpms on"'
+              resume 'swaymsg "output * dpms on"' \
+        before-sleep 'swaylock -f -i $HOME/.config/sway/bg.png -s fill'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
