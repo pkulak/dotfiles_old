@@ -241,6 +241,9 @@ exec mako
 bindsym Control+Space exec makoctl dismiss
 bindsym Control+Shift+Space exec makoctl dismiss --all
 
+# Screenshots
+bindsym $mod+Shift+s exec slurp | grim -g - ~/Pictures/(date +'screenshot_%Y-%m-%d-%H%M%S.png')
+
 # Multimedia
 bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') +5%
 bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') -5%
