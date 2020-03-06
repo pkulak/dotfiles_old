@@ -65,7 +65,7 @@ exec swayidle -w \
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+w kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
@@ -144,7 +144,7 @@ exec swayidle -w \
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
+    # bindsym $mod+w layout tabbed
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
@@ -243,7 +243,7 @@ bindsym Control+Space exec makoctl dismiss
 bindsym Control+Shift+Space exec makoctl dismiss --all
 
 # Screenshots
-bindsym $mod+Shift+s exec slurp | grim -g - ~/Pictures/(date +'screenshot_%Y-%m-%d-%H%M%S.png')
+bindsym $mod+Shift+s exec slurp | grim -g - $HOME/Pictures/(date +'screenshot_%Y-%m-%d-%H%M%S.png')
 
 # Multimedia
 bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') +5%
@@ -263,6 +263,9 @@ for_window [title="Popup Shell"] floating enable
 for_window [title="Popup Shell"] resize set 1280 720
 for_window [title="Popup Shell"] border pixel 5
 bindsym $mod+Shift+Return exec $term -t "Popup Shell"
+
+# Apps
+bindsym $mod+p exec /usr/bin/firefox
 
 xwayland enabled
 
