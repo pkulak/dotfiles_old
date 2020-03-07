@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term kitty
 # Menu
 set $menu "rofi -p run -modi drun -show drun -display-drun 'search' -show-icons | xargs swaymsg exec --"
 
