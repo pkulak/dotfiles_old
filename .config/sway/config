@@ -260,10 +260,10 @@ for_window [app_id="sublime_merge"] resize set 1440 1024
 for_window [app_id="sublime_merge"] border pixel 5
 
 # Pop-Up Terminal
-for_window [title="Popup Shell"] floating enable
-for_window [title="Popup Shell"] resize set 1280 720
-for_window [title="Popup Shell"] border pixel 5
-bindsym $mod+Shift+Return exec $term -t "Popup Shell"
+for_window [app_id="popup_shell"] floating enable
+for_window [app_id="popup_shell"] resize set 1280 720
+for_window [app_id="popup_shell"] border pixel 5
+bindsym $mod+Shift+Return exec $term --class "popup_shell"
 
 # Apps
 bindsym $mod+p exec /usr/bin/firefox
