@@ -228,7 +228,7 @@ output eDP-1 scale 2
 workspace 1 output HDMI-A-1
 
 # Clamshell Mode
-set $laptop 'Apple Computer Inc Color LCD 0x00000000'
+set $laptop eDP-1
 bindswitch --reload lid:on output $laptop disable
 bindswitch --reload lid:off output $laptop enable
 
