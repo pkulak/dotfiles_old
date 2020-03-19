@@ -34,7 +34,8 @@ output * bg $HOME/.config/sway/bg.png fill
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 300 'swaylock -f -i $HOME/.config/sway/bg.png -s fill' \
+         timeout 240 'playerctl pause' \
+         timeout 300 'swaylock -f --screenshots --clock --indicator --effect-blur 7x5 --effect-vignette 0.5:0.5' \
          timeout 330 'swaymsg "output * dpms off"' \
               resume 'swaymsg "output * dpms on"' \
         before-sleep 'swaylock -f -i $HOME/.config/sway/bg.png -s fill'
