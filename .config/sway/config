@@ -273,6 +273,13 @@ bindsym $mod+Shift+Return exec $term -t "Popup Shell"
 # Apps
 bindsym $mod+p exec /usr/bin/firefox
 
+# Theming
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Ant-Dracula'
+}
+
 xwayland enabled
 
 default_border pixel 5
