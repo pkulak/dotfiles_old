@@ -14,3 +14,8 @@ function cpass --wraps "pass"
   pass "$argv" | head -1 | tr -d '\n' | wl-copy
 end
 
+function screencast
+  wf-recorder -g (slurp)
+end
+
+set -gx PATH $PATH /home/phil/bin
