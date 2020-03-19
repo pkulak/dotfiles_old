@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term kitty
+set $term alacritty
 # Menu
 set $menu "rofi -p run -modi drun -show drun -display-drun 'search' -show-icons | xargs swaymsg exec --"
 
@@ -254,16 +254,20 @@ bindsym --locked XF86AudioPlay exec playerctl play-pause
 bindsym --locked XF86AudioNext exec playerctl next
 bindsym --locked XF86AudioPrev exec playerctl previous
 
+# Transparency
+for_window [app_id="Alacritty"] opacity 0.9
+
 # Sublime Merge
 for_window [app_id="sublime_merge"] floating enable
 for_window [app_id="sublime_merge"] resize set 1440 1024
 for_window [app_id="sublime_merge"] border pixel 5
 
 # Pop-Up Terminal
-for_window [app_id="popup_shell"] floating enable
-for_window [app_id="popup_shell"] resize set 1280 720
-for_window [app_id="popup_shell"] border pixel 5
-bindsym $mod+Shift+Return exec $term --class "popup_shell"
+for_window [title="Popup Shell"] floating enable
+for_window [title="Popup Shell"] resize set 1280 720
+for_window [title="Popup Shell"] border pixel 5
+for_window [title="Popup Shell"] opacity 0.8
+bindsym $mod+Shift+Return exec $term -t "Popup Shell"
 
 # Apps
 bindsym $mod+p exec /usr/bin/firefox
