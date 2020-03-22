@@ -18,4 +18,4 @@ function screencast
   wf-recorder -g (slurp)
 end
 
-set -gx PATH $PATH /home/phil/bin
+set PATH $PATH $HOME/bin $HOME/.cargo/bin
