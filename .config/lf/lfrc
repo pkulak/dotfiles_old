@@ -99,3 +99,24 @@ cmd zip ${{
     zip -r $1.zip $1
     rm -rf $1
 }}
+
+# Bindings
+# Remove some defaults
+map m
+map o
+map n
+map "'"
+map '"'
+map d
+map c
+map e
+map f
+
+# Basic Functions
+map . set hidden!
+map dd delete
+map p paste
+map x cut
+map y copy
+map <enter> open
+map r rename
