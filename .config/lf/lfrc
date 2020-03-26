@@ -49,7 +49,7 @@ cmd open ${{
 # map r push :rename<space>
 
 # make sure trash folder exists
-# %mkdir -p ~/.trash
+%mkdir -p ~/.trash
 
 # move current file or selected files to trash folder
 # (also see 'man mv' for backup/overwrite options)
@@ -114,7 +114,7 @@ map f
 
 # Basic Functions
 map . set hidden!
-map dd delete
+map dd trash
 map p paste
 map x cut
 map y copy
