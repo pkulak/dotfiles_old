@@ -63,7 +63,7 @@ exec swayidle -w \
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec $term
+    bindsym $mod+Return exec cage $term
 
     # Kill focused window
     bindsym $mod+w kill
