@@ -281,6 +281,7 @@ set $gnome-schema org.gnome.desktop.interface
 
 exec_always {
     gsettings set $gnome-schema gtk-theme 'Ant-Dracula'
+    gsettings set $gnome-schema icon-theme 'Papirus'
 }
 
 xwayland enabled
