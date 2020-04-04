@@ -18,4 +18,17 @@ function screencast
   wf-recorder -g (slurp)
 end
 
+function mountusb
+  sudo mkdir -p /mnt/usbstick
+  sudo mount -o gid=users,fmask=113,dmask=002 /dev/sda1 /mnt/usbstick
+end
+
+function importusb
+  mv --backup=numbered /mnt/usbstick/DCIM/100OLYMP/* ~/Pictures/negatives/(date +%m)/
+end
+
+function umountusb
+  sudo umount /mnt/usbstick
+end
+
 set PATH $PATH $HOME/bin $HOME/.cargo/bin
