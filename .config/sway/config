@@ -268,10 +268,8 @@ for_window [title="Popup Shell"] resize set 1280 720
 for_window [title="Popup Shell"] opacity 0.8
 bindsym $mod+Shift+Return exec $term -t "Popup Shell"
 
-# Pop-Up Notes
-for_window [class="Standard Notes"] floating enable
-for_window [title="Standard Notes"] resize set 1440 1024
-bindsym $mod+Shift+N exec standardnotes-desktop
+# Best to just let Steam be floating
+for_window [class="Steam"] floating enable
 
 # Apps
 bindsym $mod+p exec /usr/bin/firefox
