@@ -1,6 +1,22 @@
 fish_vi_key_bindings
 set fish_greeting
 
+alias ls 'ls -tr'
+alias .. 'cd ..'
+alias ... 'cd ../..'
+alias md 'mkdir -p'
+
+function lsd -d 'List only directories (in the current dir)'
+    ls -d */ | sed -Ee 's,/+$,,'
+end
+
+function wtf -d "Print which and --version output for the given command"
+    for arg in $argv
+        echo $arg: (which $arg)
+        echo $arg: (sh -c "$arg --version")
+    end
+end
+
 # use nvim
 function vim
   nvim $argv
