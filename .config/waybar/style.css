@@ -65,6 +65,7 @@ window#waybar.chromium {
 #cpu,
 #memory,
 #temperature,
+#custom-temperature,
 #backlight,
 #network,
 #pulseaudio,
@@ -148,8 +149,9 @@ label:focus {
     color: #2a5c45;
 }
 
-#temperature {
+#temperature, #custom-temperature {
     background-color: #f0932b;
+    color: #000000;
 }
 
 #temperature.critical {
