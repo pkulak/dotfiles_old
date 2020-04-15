@@ -153,6 +153,7 @@ exec swayidle -w \
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
+    bindsym $mod+Shift+t sticky toggle
 
     # Swap focus between the tiling area and the floating area
     bindsym $mod+space focus mode_toggle
@@ -267,6 +268,9 @@ for_window [title="Popup Shell"] floating enable
 for_window [title="Popup Shell"] resize set 1280 720
 for_window [title="Popup Shell"] opacity 0.8
 bindsym $mod+Shift+Return exec $term -t "Popup Shell"
+
+# Caged Terminal
+bindsym $mod+Mod1+Return exec cage $term
 
 # Best to just let Steam be floating
 for_window [class="Steam"] floating enable

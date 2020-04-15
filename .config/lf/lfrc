@@ -38,9 +38,9 @@ map O $mimeopen --ask $f
 cmd open ${{
     case $(file --mime-type $f -b) in
         text/*) $EDITOR $fx;;
-	application/pdf) $HOME/.config/lf/swallow zathura $fx;;
-	image/*) $HOME/.config/lf/swallow imv $fx;;
-	video/*) $HOME/.config/lf/swallow mpv $fx;;
+	application/pdf) zathura $fx;;
+	image/*) imv $fx;;
+	video/*) mpv $fx;;
         *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
     esac
 }}
