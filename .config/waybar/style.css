@@ -70,6 +70,8 @@ window#waybar.chromium {
 #network,
 #pulseaudio,
 #custom-spotify,
+#custom-packages,
+#custom-fan,
 #tray,
 #mode,
 #idle_inhibitor,
@@ -116,6 +118,16 @@ window#waybar.chromium {
 
 label:focus {
     background-color: #000000;
+}
+
+#custom-packages {
+    background-color: #90b1b1;
+    color: #000000;
+}
+
+#custom-fan {
+    background-color: #2980b9;
+    color: #000000;
 }
 
 #cpu {
