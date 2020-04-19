@@ -82,7 +82,7 @@
 	"format": "{}°C "
     },
     "custom/fan": {
-        "interval": 10,
+        "interval": 2,
 	"exec": "sensors | grep fan3 | awk '{print $2}'",
 	"format": "{} "
     },
