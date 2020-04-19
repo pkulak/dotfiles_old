@@ -5,6 +5,7 @@ alias ls 'ls -tr'
 alias .. 'cd ..'
 alias ... 'cd ../..'
 alias md 'mkdir -p'
+alias sm 'smerge .'
 
 function lsd -d 'List only directories (in the current dir)'
     ls -d */ | sed -Ee 's,/+$,,'
@@ -40,6 +41,7 @@ function mountusb
 end
 
 function importusb
+  mkdir -p ~/Pictures/negatives/(date +%m)/
   mv --backup=numbered /mnt/usbstick/DCIM/100OLYMP/* ~/Pictures/negatives/(date +%m)/
 end
 
