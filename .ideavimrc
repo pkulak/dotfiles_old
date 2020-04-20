@@ -1,0 +1,6 @@
+let mapleader = ","
+
+" I hate reaching up for these regex keys
+nmap <leader>, ^
+nmap <leader>. $
+
