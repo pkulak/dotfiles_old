@@ -3,9 +3,20 @@ let mapleader = ","
 " I hate reaching up for these regex keys
 nmap <leader>, ^
 nmap <leader>. $
+nmap 0 ^
 
 " System clipboad, please
 set clipboard=unnamedplus
+
+" Searching
+set ignorecase
+set smartcase
+
+" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
+nmap <space> /
+nmap <leader><space> ?
+
+let g:loaded_matchparen=1
 
 " Use =j to format the whole buffer as JSON
 nmap =j :%!python -m json.tool<CR>:set syntax=json<CR>

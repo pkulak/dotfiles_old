@@ -3,4 +3,13 @@ let mapleader = ","
 " I hate reaching up for these regex keys
 nmap <leader>, ^
 nmap <leader>. $
+nmap 0 ^
+
+" Searching
+set ignorecase
+set smartcase
+
+" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
+nmap <space> /
+nmap <leader><space> ?
 
