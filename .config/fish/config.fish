@@ -49,4 +49,9 @@ function umountusb
   sudo umount /mnt/usbstick
 end
 
+function news
+  yay -Pw
+end
+
 set PATH $PATH $HOME/bin $HOME/.cargo/bin
+
