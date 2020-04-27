@@ -19,6 +19,7 @@ set clipboard=unnamedplus
 " Searching
 set ignorecase
 set smartcase
+nnoremap <leader>/ :noh<return>
 
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 nmap <space> /
