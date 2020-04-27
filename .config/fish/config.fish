@@ -23,6 +23,10 @@ function vim
   nvim $argv
 end
 
+function ytdl
+  youtube-dl -f "(bestvideo[vcodec=vp9]/bestvideo)+(bestaudio[acodec=opus]/bestaudio)" "https://www.youtube.com/watch?v=$argv" -o "$argv.%(ext)s"
+end
+
 function lsh
   sudo lxc exec "$argv" -- sudo --login --user phil
 end
