@@ -57,5 +57,5 @@ function news
   yay -Pw
 end
 
-set PATH $PATH $HOME/bin $HOME/.cargo/bin
+set PATH $PATH $HOME/bin $HOME/.cargo/bin $HOME/dotfiles/bin
 
