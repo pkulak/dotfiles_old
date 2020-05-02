@@ -36,7 +36,7 @@ output * bg $HOME/.config/sway/bg.png fill
 exec swayidle -w \
          timeout 480 'playerctl pause' \
          timeout 600 'swaylock -f --screenshots --clock --indicator --effect-blur 7x5 --effect-vignette 0.5:0.5' \
-         timeout 660 'swaymsg "output * dpms off"' \
+         timeout 610 'swaymsg "output * dpms off"' \
               resume 'swaymsg "output * dpms on"' \
         before-sleep 'swaylock -f -i $HOME/.config/sway/bg.png -s fill'
 #
@@ -202,7 +202,7 @@ bindsym $mod+r mode "resize"
 # All my stuff below here
 #########################
 
-font noto:Sans 11
+font Ubuntu 11
 
 bar {
     swaybar_command waybar
@@ -261,14 +261,19 @@ bindsym --locked XF86AudioPrev exec playerctl previous
 # Transparency
 for_window [app_id="Alacritty"] opacity 0.9
 
+# Firefox
+for_window [app_id="firefox"] border pixel 3
+
 # Sublime Merge
 for_window [app_id="sublime_merge"] floating enable
 for_window [app_id="sublime_merge"] resize set 1440 1024
+for_window [app_id="sublime_merge"] border pixel 7
 
 # Pop-Up Terminal
 for_window [title="Popup Shell"] floating enable
 for_window [title="Popup Shell"] resize set 1280 720
 for_window [title="Popup Shell"] opacity 0.8
+for_window [title="Popup Shell"] border pixel 7
 bindsym $mod+Shift+Return exec $term -t "Popup Shell"
 
 # Caged Terminal
@@ -290,8 +295,15 @@ exec_always {
 
 xwayland enabled
 
-default_border pixel 5
-gaps inner 15
+# default_border pixel 5
+gaps inner 10
+
+# class                 border  bground text    indicator child_border
+client.focused          #285577 #285577 #FFFFFF #2E9EF4   #285577
+client.focused_inactive #5F676A #5F676A #FFFFFF #484E50   #5F676A
+client.unfocused        #222222 #222222 #888888 #292D2E   #222222
+client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
 focus_follows_mouse no
 
