@@ -261,9 +261,6 @@ bindsym --locked XF86AudioPrev exec playerctl previous
 # Transparency
 for_window [app_id="Alacritty"] opacity 0.9
 
-# Firefox
-for_window [app_id="firefox"] border pixel 3
-
 # Sublime Merge
 for_window [app_id="sublime_merge"] floating enable
 for_window [app_id="sublime_merge"] resize set 1440 1024
@@ -295,7 +292,7 @@ exec_always {
 
 xwayland enabled
 
-# default_border pixel 5
+default_border pixel 3
 gaps inner 10
 
 # class                 border  bground text    indicator child_border
