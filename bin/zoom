@@ -16,4 +16,5 @@ if 'pwd' in query:
 else:
     zoom = 'https://zoom.us/wc/{}/join'.format(id)
 
+print(zoom)
 webbrowser.open(zoom)
