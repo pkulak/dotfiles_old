@@ -279,7 +279,7 @@ bindsym $mod+Mod1+Return exec cage $term
 # Best to just let Steam be floating
 for_window [class="Steam"] floating enable
 
-# Apps
+# Firefox
 bindsym $mod+p exec /usr/bin/firefox
 
 # Theming
@@ -303,5 +303,14 @@ client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
 focus_follows_mouse no
+
+# Startup Apps
+workspace 10
+exec spotify 
+exec telegram-desktop
+exec sleep 5s && playerctl play
+
+workspace 1
+exec ~/.config/sway/home-screen.sh
 
 include /etc/sway/config.d/*
