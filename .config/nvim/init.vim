@@ -4,15 +4,6 @@ let mapleader = ","
 autocmd FileType html,css setlocal expandtab softtabstop shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal expandtab softtabstop shiftwidth=4 tabstop=4
 
-" Don't go on forever...
-:set colorcolumn=120
-highlight ColorColumn ctermbg=DarkGray
-
-" I hate reaching up for these regex keys
-nmap <leader>, ^
-nmap <leader>. $
-nmap 0 ^
-
 " System clipboad, please
 set clipboard=unnamedplus
 
