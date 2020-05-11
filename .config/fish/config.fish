@@ -34,7 +34,7 @@ end
 function pass 
   set dir (pwd);
   cd ~/notes/tags/credential;
-  ls -1 | fzf | awk '{print "\'"$0"\'"}' | xargs cat | tail -n 1 | tr -d '\n' | wl-copy;
+  ls -1 | fzf | awk '{print "\'"$0"\'"}' | xargs cat | tail -n 1 | nohup wl-copy -n -o >/dev/null 2>&1
   cd $dir
 end
 
