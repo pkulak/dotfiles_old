@@ -6,6 +6,7 @@ alias .. 'cd ..'
 alias ... 'cd ../..'
 alias md 'mkdir -p'
 alias sm 'smerge .'
+alias ssh 'TERM=xterm-256color command ssh'
 
 function lsd -d 'List only directories (in the current dir)'
     ls -d */ | sed -Ee 's,/+$,,'
