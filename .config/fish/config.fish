@@ -31,12 +31,19 @@ function lsh
   sudo lxc exec "$argv" -- sudo --login --user phil
 end
 
-function cpass --wraps "pass"
-  pass "$argv" | head -1 | tr -d '\n' | wl-copy
+function pass 
+  set dir (pwd);
+  cd ~/notes/tags/credential;
+  ls -1 | fzf | awk '{print "\'"$0"\'"}' | xargs cat | tail -n 1 | tr -d '\n' | wl-copy;
+  cd $dir
 end
 
 function screencast
   wf-recorder -g (slurp)
+end
+
+function mountnotes
+  snfs --ext md notes/
 end
 
 function mountusb
