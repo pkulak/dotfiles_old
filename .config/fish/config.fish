@@ -44,7 +44,7 @@ function screencast
 end
 
 function mountnotes
-  snfs --ext md notes/
+  snfs --ext ".md" notes/
 end
 
 function mountusb
