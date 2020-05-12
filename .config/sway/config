@@ -269,9 +269,8 @@ for_window [app_id="sublime_merge"] border pixel 7
 # Pop-Up Terminal
 for_window [title="Popup Shell"] floating enable
 for_window [title="Popup Shell"] resize set 1280 720
-for_window [title="Popup Shell"] opacity 0.8
 for_window [title="Popup Shell"] border pixel 7
-bindsym $mod+Shift+Return exec $term -t "Popup Shell"
+bindsym $mod+Shift+Return exec $term -t "Popup Shell" --config-file $HOME/.config/alacritty/popup.yml
 
 # Caged Terminal
 bindsym $mod+Mod1+Return exec cage $term
