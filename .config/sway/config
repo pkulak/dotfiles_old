@@ -202,7 +202,7 @@ bindsym $mod+r mode "resize"
 # All my stuff below here
 #########################
 
-font Ubuntu 11
+font Cantarell 11
 
 bar {
     swaybar_command waybar
