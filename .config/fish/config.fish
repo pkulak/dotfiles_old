@@ -47,6 +47,14 @@ function mountnotes
   snfs --ext ".md" ~/notes/
 end
 
+function mountrsync
+  sshfs 3610@usw-s003.rsync.net:/data2/home/3610 /home/phil/rsync -C
+end
+
+function mountprivate
+  gocryptfs rsync/crypt/private/ private/
+end
+
 function mountusb
   sudo mkdir -p /mnt/usbstick
   sudo mount -o gid=users,fmask=113,dmask=002 /dev/sda1 /mnt/usbstick
