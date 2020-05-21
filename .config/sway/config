@@ -258,9 +258,6 @@ bindsym --locked XF86AudioPlay exec playerctl play-pause
 bindsym --locked XF86AudioNext exec playerctl next
 bindsym --locked XF86AudioPrev exec playerctl previous
 
-# Transparency
-for_window [app_id="Alacritty"] opacity 0.9
-
 # Sublime Merge
 for_window [app_id="sublime_merge"] floating enable
 for_window [app_id="sublime_merge"] resize set 1440 1024
@@ -270,7 +267,7 @@ for_window [app_id="sublime_merge"] border pixel 7
 for_window [title="Popup Shell"] floating enable
 for_window [title="Popup Shell"] resize set 1280 720
 for_window [title="Popup Shell"] border pixel 7
-bindsym $mod+Shift+Return exec $term -t "Popup Shell" --config-file $HOME/.config/alacritty/popup.yml
+bindsym $mod+Shift+Return exec $term -t "Popup Shell" 
 
 # Caged Terminal
 bindsym $mod+Mod1+Return exec cage $term
