@@ -1,0 +1,4 @@
+#!/bin/sh
+
+rsync -aH --delete ~/Documents/scanned/ 3610@usw-s003.rsync.net:Scanned/2020/
+rsync -aH --delete ~/Pictures/negatives/ 3610@usw-s003.rsync.net:Negatives/2020/
