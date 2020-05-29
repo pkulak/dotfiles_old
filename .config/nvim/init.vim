@@ -4,9 +4,6 @@ let mapleader = ","
 autocmd FileType html,css setlocal expandtab softtabstop shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal expandtab softtabstop shiftwidth=4 tabstop=4
 
-" System clipboad, please
-set clipboard=unnamedplus
-
 " Searching
 set ignorecase
 set smartcase
