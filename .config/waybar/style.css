@@ -125,6 +125,11 @@ label:focus {
     color: #000000;
 }
 
+
+#custom-spotify, #clock {
+  padding-top: 1px;
+}
+
 #custom-fan {
     background-color: #2980b9;
     color: #000000;
