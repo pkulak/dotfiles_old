@@ -1,7 +1,7 @@
 fish_vi_key_bindings
 set fish_greeting
 
-alias ls 'ls -tr'
+alias ls 'ls -tr --color=auto'
 alias .. 'cd ..'
 alias ... 'cd ../..'
 alias md 'mkdir -p'
