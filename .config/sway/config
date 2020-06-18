@@ -276,9 +276,6 @@ bindsym $mod+Shift+Return exec $term -t "Popup Shell"
 # Caged Terminal
 bindsym $mod+Mod1+Return exec cage $term
 
-# Best to just let Steam be floating
-for_window [class="Steam"] floating enable
-
 # Firefox
 bindsym $mod+p exec /usr/bin/firefox
 
