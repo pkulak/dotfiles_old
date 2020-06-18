@@ -6,22 +6,28 @@ import getopt
 import sys
 import os
 
+
 def set_layout(node, parent):
     """
         Set the layout/split for the currently
         focused window to either vertical or
         horizontal, depending on its width/height
     """
+    if not node:
+        return
+
     height = node['rect']['height']
     width = node['rect']['width']
+    layout = parent['layout'] if parent else False
 
-    if parent['layout'] == "tabbed" or parent['layout'] == "stacked":
+    if layout == "tabbed" or layout == "stacked":
         return
 
     if height > width:
         sway_set_split(node["id"], "splitv")
     else:
         sway_set_split(node["id"], "splith")
+
 
 def sway_set_split(con_id, split):
     """
@@ -34,6 +40,15 @@ def sway_set_split(con_id, split):
         stderr=subprocess.PIPE
     )
     return True
+#
+#
+# def print_help():
+#     print("Usage: " + sys.argv[0] + " [-p path/to/pid.file]")
+#     print("")
+#     print("Options:")
+#     print("    -p path/to/pid.file   Saves the PID for this program in the filename specified")
+#     print("")
+
 
 def get_sway_tree():
     """
@@ -77,11 +92,13 @@ def get_focused_node(json_tree):
     else:
         return False
 
+
 def is_focused_id(json_tree):
     if json_tree.get("focused"):
         return json_tree["id"]
     else:
         return False
+
 
 def switch_layout():
     process = subprocess.Popen(
@@ -89,6 +106,7 @@ def switch_layout():
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
     )
+
 
 def main():
     """
@@ -112,4 +130,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
