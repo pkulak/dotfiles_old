@@ -34,9 +34,17 @@ endif
 
 let mapleader = ","
 
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set nowrap
+set noswapfile
+set nobackup
+set incsearch
+
 " File types
-autocmd FileType html,css setlocal expandtab softtabstop shiftwidth=2 tabstop=2
-autocmd FileType javascript setlocal expandtab softtabstop shiftwidth=4 tabstop=4
+autocmd FileType html,css setlocal softtabstop=2 shiftwidth=2 tabstop=2
 
 " Searching
 set ignorecase
@@ -53,6 +61,7 @@ map <C-n> :NERDTreeToggle<CR>
 " FZF
 nmap <Leader>f :GFiles<CR>
 nmap <Leader>F :Files<CR>
+nmap <Leader>h :History<CR>
 
 let g:loaded_matchparen=1
 
