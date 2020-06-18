@@ -310,4 +310,7 @@ exec sleep 5s && playerctl play
 workspace 1
 exec ~/.config/sway/home-screen.sh
 
+# Use an alternating (spiral) layout by default
+exec ~/.config/sway/alternating_layout.py
+
 include /etc/sway/config.d/*
