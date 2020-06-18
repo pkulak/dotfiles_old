@@ -21,7 +21,7 @@ set $menu "rofi -display-drun search -show drun -icon-theme \"Papirus\" -show-ic
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg $HOME/.config/sway/bg.png fill
+output * bg $HOME/.config/sway/ivy.png fill
 #
 # Example configuration:
 #
