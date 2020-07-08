@@ -58,6 +58,12 @@ nmap <leader><space> ?
 " NerdTree toggle
 map <C-n> :NERDTreeToggle<CR>
 
+" Better split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " FZF
 nmap <Leader>f :GFiles<CR>
 nmap <Leader>F :Files<CR>
