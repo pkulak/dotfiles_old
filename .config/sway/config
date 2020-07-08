@@ -279,6 +279,9 @@ bindsym $mod+Mod1+Return exec cage $term
 # Firefox
 bindsym $mod+p exec /usr/bin/firefox
 
+# Emojis!
+bindsym $mod+Mod1+e exec /usr/bin/rofimoji -c
+
 # Theming
 set $gnome-schema org.gnome.desktop.interface
 
@@ -311,6 +314,6 @@ workspace 1
 exec ~/.config/sway/home-screen.sh
 
 # Use an alternating (spiral) layout by default
-exec ~/.config/sway/alternating_layout.py
+# exec ~/.config/sway/alternating_layout.py
 
 include /etc/sway/config.d/*
