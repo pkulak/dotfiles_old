@@ -101,6 +101,8 @@ cmd zip ${{
     rm -rf $1
 }}
 
+cmd dragon %dragon-drag-and-drop -z -x $fx
+
 # Bindings
 # Remove some defaults
 map m
@@ -121,3 +123,6 @@ map x cut
 map y copy
 map <enter> open
 map r rename
+
+# Some fun stuff
+map dr dragon
