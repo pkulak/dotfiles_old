@@ -5,7 +5,7 @@ alias ls 'ls -tr --color=auto'
 alias .. 'cd ..'
 alias ... 'cd ../..'
 alias md 'mkdir -p'
-alias sm 'smerge .'
+alias sm 'GDK_BACKEND=wayland smerge .'
 alias ssh 'TERM=xterm-256color command ssh'
 
 set PATH $PATH $HOME/bin $HOME/.cargo/bin $HOME/dotfiles/bin
