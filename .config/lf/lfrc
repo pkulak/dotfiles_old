@@ -101,7 +101,7 @@ cmd zip ${{
     rm -rf $1
 }}
 
-cmd dragon %dragon-drag-and-drop -z -x $fx
+cmd dragon %dragon-drag-and-drop -a -x $fx
 
 # Bindings
 # Remove some defaults
