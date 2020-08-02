@@ -16,6 +16,9 @@ font:
         size: 13
 
 colors:
+  primary:
+    background: '#000000'
+
   # Cursor colors
   cursor:
     text:   '#2c2c2c'
