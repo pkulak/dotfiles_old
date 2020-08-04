@@ -16,7 +16,7 @@ set $right l
 # Your preferred terminal emulator
 set $term alacritty
 # Menu
-set $menu "rofi -display-drun search -show drun -icon-theme \"Papirus\" -show-icons | xargs swaymsg exec --"
+set $menu "wofi --show drun --prompt search --allow-images --width 600px --style ~/.config/wofi/style.css"
 
 ### Output configuration
 #
@@ -278,9 +278,6 @@ bindsym $mod+Mod1+Return exec cage $term
 
 # Firefox
 bindsym $mod+p exec /usr/bin/firefox
-
-# Emojis!
-bindsym $mod+Mod1+e exec /usr/bin/rofimoji -c
 
 # Theming
 set $gnome-schema org.gnome.desktop.interface
