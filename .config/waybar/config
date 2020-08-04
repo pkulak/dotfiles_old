@@ -1,85 +1,25 @@
-// vim: set ft=json:
 {
-    //"output": "eDP-1",
     "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    // Choose the order of the modules
-    "modules-left": ["idle_inhibitor", "cpu", "memory", "disk", "temperature", "sway/mode", "sway/window"],
-    "modules-center": ["sway/workspaces"],
-    "modules-right": ["custom/weather", "custom/packages", "pulseaudio#sink", "pulseaudio#source", "backlight", "battery", "clock"],
-    // Modules configuration
-    "disk": {
-        "interval": 30,
-        "format": "{percentage_used}% <span></span>"
-    },
-    "bluetooth": {
-        "format": "<b>{icon}</b>",
-        "format-alt": "{status} {icon}",
-        "interval": 30,
-        "format-icons": {
-            "enabled": "",
-            "disabled": ""
-        },
-        "tooltip-format": "{}"
-    },
-    "sway/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": false,
-        "format": "{name}",
-        "format-icons": {
-            "urgent": "",
-            "focused": "",
-            "default": ""
-        }
-    },
+    "modules-left": ["sway/workspaces", "sway/mode", "custom/spotify"],
+    "modules-center": ["custom/weather"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "cpu", "custom/temperature", "backlight", "battery", "clock", "tray"],
     "sway/mode": {
-        "format": "{}"
-    },
-    "sway/language": {
-        "format": "{}",
-        "max-length": 50
-    },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
+        "format": "<span style=\"italic\">{}</span>"
     },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
             "activated": "",
             "deactivated": ""
-        },
-        "on-update": "/tmp/k.sh"
+        }
     },
     "tray": {
+        // "icon-size": 21,
         "spacing": 10
     },
     "clock": {
-	      "format": "{:%I:%M %p}",
+	"format": "{:%a, %b %e at %I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -91,91 +31,44 @@
         "format": "{}% "
     },
     "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
-    },
-    "backlight": {
-        "format": "{percent}% {icon}",
-        "format-icons": [""],
-        "on-click": "dex /usr/share/applications/clightc.desktop"
-    },
-    "battery": {
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
+        "format-icons": ["", "", ""]
     },
     "network": {
-        "format-wifi": "{signalStrength}% ",
-        "format-ethernet": "",
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{essid}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
-    "pulseaudio#sink": {
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon}",
         "format-bluetooth-muted": " {icon}",
-        "format-muted": "0%  ",
-        "format-source": "",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
-    },
-    "pulseaudio#source": {
-        "format": "{format_source}",
-        "format-bluetooth": "{format_source}",
-        "format-bluetooth-muted": "{format_source}",
-        "format-muted": "{format_source}",
+        "format-muted": " {format_source}",
         "format-source": "{volume}% ",
-        "format-source-muted": "0% ",
+        "format-source-muted": "",
         "format-icons": {
-            "headphone": "",
+	    "headphone": "",
             "hands-free": "",
             "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": ["", ""]
         },
         "on-click": "pavucontrol"
     },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
-    },
-    "custom/weather": {
-    	  "interval": 600,
-        "exec": "~/.config/waybar/modules/weather.py"
-    },
-    "custom/packages": {
-        "interval": 86400,
-	      "exec": "checkupdates | wc -l",
-	      "format": "{} "
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", ""]
     },
     "custom/spotify": {
         "interval": 5,
@@ -184,5 +77,33 @@
         "exec-if": "pgrep spotify",
         "escape": true
     },
+    "custom/weather": {
+    	"interval": 600,
+        "exec": "~/.config/waybar/modules/weather.py"
+    },
+    "custom/temperature": {
+        "interval": 10,
+	"exec": "sensors | grep 'Core 0:' | awk '{print substr($3, 2, 2)}'",
+	"format": "{}°C "
+    },
+    "custom/fan": {
+        "interval": 2,
+	"exec": "sensors | grep fan2 | awk '{print $2}'",
+	"format": "{} "
+    },
+    "battery": {
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 25
+    },
+    "custom/packages": {
+        "interval": 86400,
+	"exec": "checkupdates | wc -l",
+	"format": "{} "
+    }
 }
-
