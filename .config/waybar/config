@@ -83,7 +83,7 @@
     },
     "custom/fan": {
         "interval": 2,
-	"exec": "sensors | grep fan3 | awk '{print $2}'",
+	"exec": "sensors | grep fan2 | awk '{print $2}'",
 	"format": "{} "
     },
     "custom/packages": {
