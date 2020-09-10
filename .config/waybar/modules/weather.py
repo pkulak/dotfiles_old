@@ -21,5 +21,5 @@ print(
         summary[0].text_content(),
         "↑" + high[0].text_content(),
         "↓" + low[0].text_content(),
-        "—", 
+        "-", 
         quality[1]['Category']['Name'])
