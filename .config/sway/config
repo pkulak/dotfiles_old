@@ -279,8 +279,12 @@ bindsym $mod+Mod1+Return exec cage $term
 # Firefox
 bindsym $mod+p exec /usr/bin/firefox
 
-# Emojis!
+# Best to just let Steam be floating
+for_window [class="Steam"] floating enable
+
+# Emojis and a calculator!
 bindsym $mod+Mod1+e exec /usr/bin/rofimoji -c
+bindsym $mod+Mod1+c exec rofi -show calc -modi calc -no-show-match -no-sort
 
 # Theming
 set $gnome-schema org.gnome.desktop.interface
@@ -307,7 +311,7 @@ focus_follows_mouse no
 # Startup Apps
 workspace 10
 exec spotify 
-exec telegram-desktop
+exec QT_QPA_PLATFORM=wayland telegram-desktop
 exec sleep 5s && playerctl play
 
 workspace 1
