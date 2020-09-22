@@ -286,6 +286,9 @@ for_window [class="Steam"] floating enable
 bindsym $mod+Mod1+e exec /usr/bin/rofimoji -c
 bindsym $mod+Mod1+c exec rofi -show calc -modi calc -no-show-match -no-sort
 
+# Screensharing
+bindsym $mod+m exec ~/.config/sway/tmp-screenshare &
+
 # Theming
 set $gnome-schema org.gnome.desktop.interface
 

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+screenshare
+sleep 3600
+screenshare stop
