@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Hey Email
+GenericName=Hey Email
+Exec=firefox app.hey.com
+Terminal=false
+Icon=hey
+Type=Application
