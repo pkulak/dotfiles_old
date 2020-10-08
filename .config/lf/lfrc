@@ -40,7 +40,7 @@ cmd open ${{
         text/*) $EDITOR $fx;;
 	application/pdf) zathura $fx;;
 	image/*) imv $fx;;
-	video/*) mpv $fx;;
+	video/*) mpv --mute $fx;;
         *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
     esac
 }}
