@@ -270,10 +270,6 @@ for_window [title="Popup Shell"] resize set 1280 720
 for_window [title="Popup Shell"] border pixel 7
 bindsym $mod+Shift+Return exec $term -t "Popup Shell" 
 
-# Spotify
-for_window [class="Spotify"] floating enable
-for_window [class="Spotify"] resize set 1440 1024
-
 # Caged Terminal
 bindsym $mod+Mod1+Return exec cage $term
 
@@ -310,7 +306,7 @@ client.unfocused        #222222 #222222 #888888 #292D2E   #222222
 client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
-focus_follows_mouse no
+focus_follows_mouse yes
 
 # Startup Apps
 exec ~/.config/sway/home-screen.sh
