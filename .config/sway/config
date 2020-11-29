@@ -310,5 +310,6 @@ focus_follows_mouse yes
 
 # Startup Apps
 exec ~/.config/sway/home-screen.sh
+exec autotiling
 
 include /etc/sway/config.d/*
