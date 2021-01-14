@@ -10,5 +10,5 @@ alias ssh 'TERM=xterm-256color command ssh'
 alias sd 'sudo shutdown now'
 alias c clear
 
-set PATH $PATH $HOME/bin $HOME/.cargo/bin $HOME/dotfiles/bin
+set PATH $PATH $HOME/bin $HOME/.cargo/bin $HOME/dotfiles/bin $HOME/vevo/rest
 
