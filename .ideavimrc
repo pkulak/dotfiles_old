@@ -1,10 +1,6 @@
-let mapleader = ","
-
 " Searching
 set ignorecase
 set smartcase
 
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-nmap <space> /
-nmap <leader><space> ?
+set relativenumber
 
