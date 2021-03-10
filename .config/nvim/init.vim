@@ -18,6 +18,8 @@ if dein#load_state('~/.local/share/dein')
   call dein#add('preservim/nerdtree')
   call dein#add('itchyny/lightline.vim')
   call dein#add('junegunn/fzf.vim')
+  call dein#add('elixir-editors/vim-elixir')
+  call dein#add('mhinz/vim-mix-format')
 
   call dein#end()
   call dein#save_state()
@@ -49,20 +51,6 @@ autocmd FileType html,css setlocal softtabstop=2 shiftwidth=2 tabstop=2
 " Searching
 set ignorecase
 set smartcase
-nnoremap <leader>/ :noh<return>
-
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-nmap <space> /
-nmap <leader><space> ?
-
-" NerdTree toggle
-map <C-n> :NERDTreeToggle<CR>
-
-" Better split navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 
 " FZF
 nmap <Leader>f :GFiles<CR>
@@ -80,3 +68,4 @@ nmap =x :%!python -c 'import sys;import xml.dom.minidom;s=sys.stdin.read();print
 set number
 set relativenumber
 
+let g:mix_format_on_save = 1
