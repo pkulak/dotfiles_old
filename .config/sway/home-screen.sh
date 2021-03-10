@@ -9,7 +9,7 @@ swaymsg "split vertical"
 swaymsg "layout tabbed"
 swaymsg "resize grow width 35ppt"
 swaymsg "workspace 10"
-swaymsg "exec signal-desktop"
+swaymsg "exec element-desktop"
 swaymsg "exec spotify"
 sleep 1s 
 swaymsg "workspace 1"

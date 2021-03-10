@@ -9,6 +9,7 @@ alias sm 'GDK_BACKEND=wayland smerge .'
 alias ssh 'TERM=xterm-256color command ssh'
 alias sd 'sudo shutdown now'
 alias c clear
+alias usage 'sudo btrfs fi usage /'
 
-set PATH $PATH $HOME/bin $HOME/.cargo/bin $HOME/dotfiles/bin $HOME/vevo/rest
+set PATH $PATH $HOME/bin $HOME/.cargo/bin $HOME/dotfiles/bin $HOME/vevo/rest $HOME/.local/bin
 
