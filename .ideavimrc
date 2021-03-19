@@ -5,3 +5,5 @@ set smartcase
 set relativenumber
 set number
 
+inoremap jj <esc>
+
