@@ -20,6 +20,7 @@ if dein#load_state('~/.local/share/dein')
   call dein#add('junegunn/fzf.vim')
   call dein#add('elixir-editors/vim-elixir')
   call dein#add('mhinz/vim-mix-format')
+  call dein#add('preservim/nerdtree')
 
   call dein#end()
   call dein#save_state()
@@ -52,6 +53,18 @@ autocmd FileType java,kotlin,xml setlocal softtabstop=4 shiftwidth=4 tabstop=4
 set ignorecase
 set smartcase
 
+" Better split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" NERD Tree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
 " FZF
 nmap <Leader>f :GFiles<CR>
 nmap <Leader>F :Files<CR>
@@ -71,3 +84,8 @@ set relativenumber
 let g:mix_format_on_save = 1
 
 inoremap jj <esc>
+
+" Save files a bunch
+:au FocusLost * silent! wa
+:set autowrite
+
