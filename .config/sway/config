@@ -210,6 +210,14 @@ bar {
 }
 
 # Inputs
+input 21298:5120:Clearly_Superior_Technologies._CST_Laser_Trackball {
+    natural_scroll enabled
+    scroll_method on_button_down
+    scroll_button 273
+    scroll_factor 0.4
+    accel_profile adaptive
+}
+
 input 1149:8257:Kensington_Kensington_Slimblade_Trackball {
     natural_scroll enabled
     scroll_method on_button_down
