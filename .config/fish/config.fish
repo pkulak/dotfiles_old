@@ -12,4 +12,4 @@ alias c clear
 alias usage 'sudo btrfs fi usage /'
 
 set PATH $PATH $HOME/bin $HOME/.cargo/bin $HOME/dotfiles/bin $HOME/vevo/rest $HOME/.local/bin
-
+set EDITOR vim
