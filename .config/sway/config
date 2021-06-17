@@ -254,7 +254,7 @@ bindsym $mod+Mod1+Return exec cage $term
 # Firefox
 bindsym $mod+p exec /usr/bin/firefox
 for_window [title="Firefox — Sharing Indicator"] floating enable
-for_window [title="Firefox — Sharing Indicator"] no_focus
+for_window [title="Firefox — Sharing Indicator"] move scratchpad
 
 # Best to just let Steam be floating
 for_window [class="Steam"] floating enable
