@@ -19,5 +19,6 @@ low = tree.cssselect("a[data-day=\"1\"] span.minTemp")
 
 print(
         summary[0].text_content(),
+        " ",
         "↑" + high[0].text_content(),
         "↓" + low[0].text_content())
