@@ -16,7 +16,7 @@ set $term alacritty
 set $menu "rofi -display-drun search -show drun -icon-theme \"Papirus\" -show-icons | xargs swaymsg exec --"
 
 ### Output configuration
-output * bg $HOME/.config/sway/beach.jpg fill
+output * bg $HOME/.config/sway/family.jpg fill
 
 ### Idle configuration
 exec swayidle -w \
