@@ -22,7 +22,7 @@ output * bg $HOME/.config/sway/family.jpg fill
 ### Idle configuration
 exec swayidle -w \
          timeout 300 'playerctl pause' \
-         timeout 1200 'systemctl suspend'
+         timeout 7200 'systemctl suspend'
 
 ### Key bindings
 #
@@ -278,7 +278,6 @@ set $gnome-schema org.gnome.desktop.interface
 exec_always {
     gsettings set $gnome-schema gtk-theme 'Ant-Dracula'
     gsettings set $gnome-schema icon-theme 'Papirus'
-    gsettings set $gnome-schema text-scaling-factor '1.25'
 }
 
 output eDP-1 pos 0 360
