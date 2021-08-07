@@ -1,4 +1,4 @@
-@define-color bg_primary rgba(255, 255, 255, 0.5);
+@define-color bg_primary rgba(255, 255, 255, 0.6);
 @define-color fg_primary #333;
 
 * {
@@ -32,7 +32,7 @@ window#waybar.solo {
 }
 */
 
-#window, #custom-weather {
+#window, #custom-weather, #custom-spotify {
     color: #eee;
     text-shadow: 0px 0px 2px #000;
 }
@@ -119,6 +119,7 @@ window#waybar.solo {
 #idle_inhibitor,
 #language,
 #window,
+#custom-spotify,
 #custom-weather,
 #custom-packages,
 #mpd {
