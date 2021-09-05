@@ -17,7 +17,7 @@ exec ulauncher --hide-window
 set $menu ulauncher-toggle
 
 ### Output configuration
-output * bg $HOME/.config/sway/family.jpg fill
+output * bg $HOME/.config/sway/small-memory.jpg fill
 
 ### Idle configuration
 exec swayidle -w \
