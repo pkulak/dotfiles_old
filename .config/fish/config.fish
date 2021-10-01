@@ -11,6 +11,7 @@ alias sd 'sudo shutdown now'
 alias c clear
 alias za zathura
 alias bc 'bc -l'
+alias ts 'date -u +"%Y-%m-%dT%H:%M:%SZ"'
 
 set PATH $PATH $HOME/bin $HOME/.cargo/bin $HOME/dotfiles/bin $HOME/vevo/rest $HOME/.local/bin
 setenv EDITOR vim
