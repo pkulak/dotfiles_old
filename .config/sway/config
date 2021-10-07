@@ -13,7 +13,8 @@ set $right l
 set $term alacritty
 
 # Menu
-set $menu "rofi -display-drun search -show drun -icon-theme \"Papirus\" -show-icons | xargs swaymsg exec --"
+exec ulauncher --hide-window
+set $menu ulauncher-toggle
 
 ### Output configuration
 output * bg $HOME/.config/sway/small-memory.jpg fill
@@ -248,6 +249,9 @@ for_window [title="Popup Shell"] resize set 1280 720
 for_window [title="Popup Shell"] border pixel 7
 bindsym $mod+Shift+Return exec $term -t "Popup Shell" 
 
+# Launcher
+for_window [app_id="ulauncher"] border none
+
 # Caged Terminal
 bindsym $mod+Mod1+Return exec cage $term
 
@@ -258,10 +262,6 @@ for_window [title="Firefox — Sharing Indicator"] move scratchpad
 
 # Best to just let Steam be floating
 for_window [class="Steam"] floating enable
-
-# Emojis and a calculator!
-bindsym $mod+Mod1+e exec /usr/bin/rofimoji -c
-bindsym $mod+Mod1+c exec rofi -show calc -modi calc -no-show-match -no-sort
 
 # Theming
 set $gnome-schema org.gnome.desktop.interface

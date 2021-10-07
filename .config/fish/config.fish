@@ -9,6 +9,7 @@ alias sm 'GDK_BACKEND=wayland smerge .'
 alias ssh 'TERM=xterm-256color command ssh'
 alias sd 'sudo shutdown now'
 alias c clear
+alias za zathura
 alias bc 'bc -l'
 alias ts 'date -u +"%Y-%m-%dT%H:%M:%SZ"'
 
