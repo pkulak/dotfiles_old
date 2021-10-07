@@ -1,0 +1,8 @@
+[Unit]
+Description=Rsync.net backup
+
+[Service]
+Type=simple
+
+ExecStart=/home/phil/dotfiles/bin/backup.sh
+

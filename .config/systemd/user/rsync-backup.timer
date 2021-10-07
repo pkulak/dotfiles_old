@@ -1,0 +1,11 @@
+[Unit]
+Description=Backup some folders to Rsync.net
+
+[Timer]
+OnCalendar=*-*-* *:00:00
+Persistent=true
+Unit=rsync-backup.service
+
+[Install]
+WantedBy=timers.target
+
