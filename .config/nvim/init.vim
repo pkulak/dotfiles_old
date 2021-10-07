@@ -21,6 +21,7 @@ if dein#load_state('~/.local/share/dein')
   call dein#add('elixir-editors/vim-elixir')
   call dein#add('mhinz/vim-mix-format')
   call dein#add('preservim/nerdtree')
+  call dein#add('mileszs/ack.vim')
 
   call dein#end()
   call dein#save_state()
@@ -47,7 +48,7 @@ set nobackup
 set incsearch
 
 " File types
-autocmd FileType java,kotlin,xml setlocal softtabstop=4 shiftwidth=4 tabstop=4
+autocmd FileType java,kotlin,xml,brs setlocal softtabstop=4 shiftwidth=4 tabstop=4
 
 " Searching
 set ignorecase
@@ -89,3 +90,24 @@ inoremap jj <esc>
 :au FocusLost * silent! wa
 :set autowrite
 
+" Use ripgrep for searching ⚡️
+" Options include:
+" --vimgrep -> Needed to parse the rg response properly for ack.vim
+" --smart-case -> Search case insensitive if all lowercase pattern, Search case sensitively otherwise
+let g:ackprg = 'rg --vimgrep --smart-case'
+
+" Auto close the Quickfix list after pressing '<enter>' on a list item
+let g:ack_autoclose = 1
+
+" Any empty ack search will search for the work the cursor is on
+let g:ack_use_cword_for_empty_search = 1
+
+" Don't jump to first match
+cnoreabbrev Ack Ack!
+
+" Maps <leader>/ so we're ready to type the search keyword
+nnoremap <Leader>/ :Ack!<Space>
+
+" Navigate quickfix list with ease
+nnoremap <silent> [q :cprevious<CR>
+nnoremap <silent> ]q :cnext<CR>
