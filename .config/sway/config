@@ -21,8 +21,9 @@ output * bg $HOME/.config/sway/small-memory.jpg fill
 
 ### Idle configuration
 exec swayidle -w \
-         timeout 480 'playerctl pause' \
-         timeout 3600 'systemctl suspend'
+         timeout 300 'playerctl pause' \
+         timeout 600 'systemctl --user start miner && swaymsg "output * dpms off"' \
+         resume 'swaymsg "output * dpms on"'
 
 ### Key bindings
 #
@@ -220,7 +221,7 @@ bindswitch --reload lid:off output $laptop enable
 exec redshift 
 
 # Hide our cursor after a bit
-seat * hide_cursor 8000
+seat * hide_cursor 3000
 
 # Notifications
 exec mako
@@ -288,5 +289,8 @@ focus_follows_mouse yes
 # Startup Apps
 exec autotiling
 exec ~/.config/sway/home-screen.sh
+
+# Env vars
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 include /etc/sway/config.d/*

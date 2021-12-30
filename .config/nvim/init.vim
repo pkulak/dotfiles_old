@@ -22,6 +22,7 @@ if dein#load_state('~/.local/share/dein')
   call dein#add('mhinz/vim-mix-format')
   call dein#add('preservim/nerdtree')
   call dein#add('mileszs/ack.vim')
+  call dein#add('udalov/kotlin-vim')
 
   call dein#end()
   call dein#save_state()
