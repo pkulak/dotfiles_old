@@ -7,7 +7,7 @@ function importusb
   set jpegs /mnt/usbstick/DCIM/100OLYMP/*.JPG
 
   count $photos && mv --backup=numbered $photos ~/Pictures/negatives/(date +%Y)/(date +%m)/
-  count $videos && mv --backup=numbered $videos ~/Pictrues/negatives/(date +%Y)/(date +%m)/
+  count $videos && mv --backup=numbered $videos ~/Pictures/negatives/(date +%Y)/(date +%m)/
 
   count $jpegs && rm $jpegs
 end
