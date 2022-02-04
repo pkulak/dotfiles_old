@@ -4,7 +4,7 @@ key_bindings:
   - { key: V, mods: Control|Shift, chars: "\x16" }
   - { key: C, mods: Control|Shift, chars: "\x03" }
 
-background_opacity: 0.9
+window.opacity: 0.9
 
 window:
   padding:
@@ -33,7 +33,7 @@ colors:
   normal:
     black:   '#1c1c1c'
     red:     '#bc5653'
-    green:   '#909d63'
+    green:   '#737d4f'
     yellow:  '#ebc17a'
     blue:    '#7eaac7'
     magenta: '#aa6292'
