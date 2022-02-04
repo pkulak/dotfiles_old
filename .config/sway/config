@@ -23,7 +23,7 @@ output * bg $HOME/.config/sway/small-memory.jpg fill
 exec swayidle -w \
          timeout 300 'playerctl pause' \
          timeout 600 'systemctl --user start miner && swaymsg "output * dpms off"' \
-         resume 'swaymsg "output * dpms on"'
+         resume 'systemctl --user stop miner && swaymsg "output * dpms on"'
 
 ### Key bindings
 #
@@ -287,8 +287,8 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 focus_follows_mouse yes
 
 # Startup Apps
-exec autotiling
 exec ~/.config/sway/home-screen.sh
+exec autotiling
 
 # Env vars
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
