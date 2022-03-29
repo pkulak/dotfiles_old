@@ -1,4 +1,6 @@
 #!/bin/sh
+#
+# Set this as Exec in /usr/share/wayland-sessions/sway.desktop
 
 export TERMINAL="alacritty"
 export BROWSER="firefox"
