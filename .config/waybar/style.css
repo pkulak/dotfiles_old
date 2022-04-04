@@ -6,6 +6,7 @@
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
     /* font-family: Roboto, Helvetica, Arial, sans-serif; */
+    font-family: Cantarell, "Font Awesome 6 Free";
     font-size: 14px;
     min-height: 0;
     font-weight: bold;

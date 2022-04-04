@@ -1,7 +1,6 @@
 #!/bin/bash
-swaymsg "exec alacritty"
-sleep 1s
 swaymsg "exec firefox"
+swaymsg "exec alacritty"
 sleep 2s
 swaymsg "splitv"
 swaymsg "layout tabbed"

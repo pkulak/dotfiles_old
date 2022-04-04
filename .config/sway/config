@@ -22,8 +22,10 @@ output * bg $HOME/.config/sway/small-memory.jpg fill
 ### Idle configuration
 exec swayidle -w \
          timeout 300 'playerctl pause' \
-         timeout 600 'systemctl --user start miner && swaymsg "output * dpms off"' \
-         resume 'systemctl --user stop miner && swaymsg "output * dpms on"'
+         timeout 600 'swaymsg "output * dpms off"' \
+                 resume 'swaymsg "output * dpms on"' \
+         timeout 3600 'sudo systemctl suspend' \
+                 after-resume 'swaymsg "output * dpms on"'
 
 ### Key bindings
 #
@@ -187,7 +189,7 @@ input 21298:5120:Clearly_Superior_Technologies._CST_Laser_Trackball {
     natural_scroll enabled
     scroll_method on_button_down
     scroll_button 273
-    scroll_factor 0.4
+    scroll_factor 0.3
     accel_profile adaptive
 }
 
