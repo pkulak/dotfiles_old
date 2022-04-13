@@ -289,10 +289,10 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 focus_follows_mouse yes
 
 # Startup Apps
-exec ~/.config/sway/home-screen.sh
 exec autotiling
 
 # Env vars
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 include /etc/sway/config.d/*
+include ~/.config/sway/default
