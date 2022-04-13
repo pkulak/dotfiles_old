@@ -1,2 +1,8 @@
+### Idle configuration
+exec swayidle -w \
+         timeout 300 'playerctl pause' \
+         timeout 600 'swaymsg "output * dpms off"' \
+                 resume 'swaymsg "output * dpms on"' \
+
 output eDP-1 pos 0 360
 output HDMI-A-1 pos 1920 0
