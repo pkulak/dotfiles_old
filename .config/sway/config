@@ -295,4 +295,4 @@ exec autotiling
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 include /etc/sway/config.d/*
-include ~/.config/sway/default
+include ~/.config/sway/configs-enabled/*
