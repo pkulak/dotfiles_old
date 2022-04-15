@@ -177,12 +177,14 @@ bar {
 }
 
 # Inputs
+
 input 21298:5120:Clearly_Superior_Technologies._CST_Laser_Trackball {
     natural_scroll enabled
     scroll_method on_button_down
     scroll_button 273
     scroll_factor 0.3
     accel_profile adaptive
+    pointer_accel -0.75
 }
 
 input 1149:8257:Kensington_Kensington_Slimblade_Trackball {
@@ -198,6 +200,10 @@ input 1149:8257:Kensington_Slimblade_Trackball {
 }
 
 input type:touchpad {
+    natural_scroll enabled
+}
+
+input type:pointer {
     natural_scroll enabled
 }
 
@@ -218,9 +224,8 @@ exec redshift
 seat * hide_cursor 3000
 
 # Notifications
-exec mako
-bindsym Control+Space exec makoctl dismiss
-bindsym Control+Shift+Space exec makoctl dismiss --all
+exec swaync
+bindsym Control+Space exec swaync-client -t -sw
 
 # Screenshots
 bindsym $mod+Shift+s exec slurp | grim -g - $HOME/Pictures/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')
