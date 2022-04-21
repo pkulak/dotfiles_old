@@ -228,8 +228,9 @@ exec redshift
 seat * hide_cursor 3000
 
 # Notifications
-exec swaync
-bindsym Control+Space exec swaync-client -t -sw
+exec mako
+bindsym Control+Space exec makoctl dismiss
+bindsym Control+Shift+Space exec makoctl dismiss --all
 
 # Screenshots
 bindsym $mod+Shift+s exec slurp | grim -g - $HOME/Pictures/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')
