@@ -195,12 +195,14 @@ input 1149:8257:Kensington_Kensington_Slimblade_Trackball {
     natural_scroll enabled
     scroll_method on_button_down
     scroll_button 275
+    accel_profile adaptive
 }
 
 input 1149:8257:Kensington_Slimblade_Trackball {
     natural_scroll enabled
     scroll_method on_button_down
     scroll_button 275
+    accel_profile adaptive
 }
 
 input type:touchpad {
