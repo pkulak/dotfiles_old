@@ -33,7 +33,7 @@ window#waybar.solo {
 }
 */
 
-#window, #custom-weather, #custom-spotify {
+#window, #custom-weather, #custom-media {
     color: #eee;
     text-shadow: 0px 0px 2px #000;
 }
@@ -120,7 +120,6 @@ window#waybar.solo {
 #idle_inhibitor,
 #language,
 #window,
-#custom-spotify,
 #custom-weather,
 #custom-packages,
 #mpd {
@@ -199,7 +198,7 @@ label:focus {
     /* min-width: 100px; */
 }
 
-#custom-media.custom-spotify {
+#custom-media.custom-media {
     background-color: #66cc99;
 }
 
