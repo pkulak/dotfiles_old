@@ -259,9 +259,6 @@ bindsym $mod+Shift+Return exec $term -t "Popup Shell"
 # Launcher
 for_window [app_id="ulauncher"] border none
 
-# Caged Terminal
-bindsym $mod+Mod1+Return exec cage $term
-
 # Firefox
 bindsym $mod+p exec /usr/bin/firefox
 for_window [title="Firefox — Sharing Indicator"] floating enable

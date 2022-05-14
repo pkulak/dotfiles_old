@@ -12,11 +12,10 @@ alias c clear
 alias za zathura
 alias bc 'bc -l'
 alias ts 'date -u +"%Y-%m-%dT%H:%M:%SZ"'
-alias gdm 'sudo systemctl start gdm'
 alias l 'exa --long --all --links --git --sort mod'
 alias bc 'bc -lq'
 alias rs 'rsync -avH --info=progress2'
-alias cleanup_packages='set -x; sudo pacman -Rs (pacman -Qdtq)'
+alias cleanup_packages 'set -x; sudo pacman -Rs (pacman -Qdtq)'
 
 set PATH $PATH $HOME/bin $HOME/.cargo/bin $HOME/dotfiles/bin $HOME/vevo/rest/bin $HOME/.local/bin $HOME/.local/share/gem/ruby/3.0.0/bin/
 setenv EDITOR vim

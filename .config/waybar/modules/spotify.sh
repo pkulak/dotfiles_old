@@ -1,9 +1,9 @@
 #!/bin/bash
 
-class=$(playerctl metadata --player=spotify --format '{{lc(status)}}')
+class=$(playerctl metadata --format '{{lc(status)}}')
 
 if [[ $class == "playing" ]]; then
-  info=$(playerctl metadata --player=spotify --format '{{artist}} - {{title}}')
+  info=$(playerctl metadata --format '{{artist}} - {{title}}')
   if [[ ${#info} > 40 ]]; then
     info=$(echo $info | cut -c1-40)"..."
   fi

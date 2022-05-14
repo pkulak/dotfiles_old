@@ -178,10 +178,9 @@
 	      "format": "{} "
     },
     "custom/spotify": {
-        "interval": 5,
+        "interval": 2,
         "return-type": "json",
         "exec": "~/.config/waybar/modules/spotify.sh",
-        "exec-if": "pgrep spotify",
         "escape": true
     }
 }
