@@ -213,6 +213,11 @@ input type:pointer {
     natural_scroll enabled
 }
 
+input type:keyboard {
+  repeat_delay 200
+  repeat_rate 30
+}
+
 # Outputs
 
 # Focus on my main monitor
