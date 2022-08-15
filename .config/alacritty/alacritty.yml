@@ -1,3 +1,10 @@
+shell:
+  program: /usr/local/bin/fish
+  args:
+    - --login
+    - --init-command
+    - "echo hello"
+
 key_bindings:
   - { key: V, mods: Control, action: Paste }
   - { key: C, mods: Control, action: Copy }
