@@ -5,7 +5,7 @@ alias ls 'ls -tr --color=auto'
 alias .. 'cd ..'
 alias ... 'cd ../..'
 alias md 'mkdir -p'
-alias sm 'GDK_BACKEND=wayland smerge .'
+alias sm 'GDK_BACKEND=wayland flatpak run com.sublimemerge.App .'
 alias ssh 'TERM=xterm-256color command ssh'
 alias sd 'sudo shutdown now'
 alias c clear
