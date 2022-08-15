@@ -1,9 +1,9 @@
 shell:
-  program: /usr/local/bin/fish
+  program: /usr/bin/fish
   args:
     - --login
     - --init-command
-    - "echo hello"
+    - "distrobox enter arch"
 
 key_bindings:
   - { key: V, mods: Control, action: Paste }
@@ -17,15 +17,6 @@ window:
   padding:
     x: 2
     y: 2
-
-font:
-  normal:
-    family: Ubuntu Mono
-  bold:
-    family: Ubuntu Mono
-  italic:
-    family: Ubuntu Mono
-  size: 13
 
 colors:
   primary:

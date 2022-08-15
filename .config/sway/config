@@ -13,8 +13,7 @@ set $right l
 set $term alacritty
 
 # Menu
-exec ulauncher --hide-window
-set $menu ulauncher-toggle
+set $menu wofi -a -b -I -modi drun --show drun
 
 ### Output configuration
 output * bg $HOME/.config/sway/small-memory.jpg fill

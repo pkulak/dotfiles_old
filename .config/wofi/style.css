@@ -1,7 +1,32 @@
-#inner-box {
-  margin: 10px;
+window {
+    border: 2px solid #285577;
+    border-radius: 12px;
+    background-color: rgba(39, 41, 53, 0.88); 
 }
 
-#img {
-  margin-right: 10px;
+#input {
+    color: #50fa7b;
+    border: 2px solid #285577;
+    border-radius: 12px;
+    background-color: rgba(39, 41, 53, 0.88);
+    font-size: 18px;
+}
+
+#outer-box {
+    margin: 10px;
+}
+
+#scroll {
+    margin: 5px 0px;
+    font-size: 16px;
+    color: #bd93f9;
+}
+
+#scroll label {
+    margin: 1px 10px;
+}
+
+#entry:selected {
+    color: #000000;
+    background-color: #285577
 }
