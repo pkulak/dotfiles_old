@@ -1,9 +1,8 @@
 shell:
-  program: /usr/bin/fish
+  program: /usr/bin/bash
   args:
-    - --login
-    - --init-command
-    - "distrobox enter arch"
+    - -c
+    - "distrobox enter arch -- /usr/bin/fish"
 
 key_bindings:
   - { key: V, mods: Control, action: Paste }
