@@ -290,8 +290,8 @@ for_window [class="Steam"] floating enable
 set $gnome-schema org.gnome.desktop.interface
 
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'Ant-Dracula'
-    gsettings set $gnome-schema icon-theme 'Papirus'
+    gsettings set $gnome-schema gtk-theme 'Adwaita-dark'
+    gsettings set $gnome-schema icon-theme 'Adwaita'
 }
 
 xwayland enabled
