@@ -17,6 +17,15 @@ window:
     x: 2
     y: 2
 
+font:
+  normal:
+    family: DejaVu Sans Mono
+  bold:
+    family: DejaVu Sans Mono
+  italic:
+    family: DejaVu Sans Mono
+  size: 12
+
 colors:
   primary:
     background: '#000000'
