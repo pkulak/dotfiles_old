@@ -18,5 +18,9 @@ alias rs 'rsync -avH --info=progress2'
 alias cleanup_packages 'set -x; sudo pacman -Rs (pacman -Qdtq)'
 alias dr 'dragon-drag-and-drop -a -x'
 
+alias podman 'distrobox-host-exec podman'
+alias flatpak 'distrobox-host-exec flatpak'
+alias snapper 'distrobox-host-exec snapper'
+
 set PATH $PATH $HOME/bin $HOME/.cargo/bin $HOME/dotfiles/bin $HOME/vevo/rest/bin $HOME/.local/bin $HOME/.local/share/gem/ruby/3.0.0/bin/
 setenv EDITOR vim
