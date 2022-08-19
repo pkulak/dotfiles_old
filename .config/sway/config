@@ -267,7 +267,7 @@ bindsym --locked XF86AudioPrev exec playerctl previous
 # Sublime Merge
 for_window [app_id="smerge"] floating enable
 for_window [app_id="smerge"] resize set 1440 1024
-for_window [app_id="smerge"] border pixel 0
+for_window [app_id="smerge"] border pixel 7
 
 # Pop-Up Terminal
 for_window [title="Popup Shell"] floating enable
