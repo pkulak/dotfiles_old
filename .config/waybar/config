@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["idle_inhibitor", "cpu", "memory", "disk", "temperature", "sway/mode", "custom/media"],
     "modules-center": ["sway/workspaces"],
-    "modules-right": ["custom/weather", "custom/packages", "pulseaudio#sink", "pulseaudio#source", "backlight", "battery", "clock"],
+    "modules-right": ["custom/weather", "custom/packages", "pulseaudio#sink", "backlight", "battery", "clock", "tray"],
     // Modules configuration
     "disk": {
         "interval": 30,
