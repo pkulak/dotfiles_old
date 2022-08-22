@@ -243,7 +243,7 @@ bindswitch --reload lid:on output $laptop disable
 bindswitch --reload lid:off output $laptop enable
 
 # Night Mode
-exec redshift 
+exec wlsunset -l 45.5 -L -122.6 -g 0.8
 
 # Hide our cursor after a bit
 seat * hide_cursor 3000

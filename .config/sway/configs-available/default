@@ -2,7 +2,7 @@
 exec swayidle -w \
          timeout 600 'swaymsg "output * dpms off"' \
                  resume 'swaymsg "output * dpms on"' \
-         timeout 3600 'sudo systemctl suspend' \
+         timeout 3600 'systemctl suspend' \
                  after-resume 'swaymsg "output * dpms on"'
 
 exec ~/.config/sway/home-screen.sh

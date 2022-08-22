@@ -21,6 +21,7 @@ alias dr 'dragon-drag-and-drop -a -x'
 alias podman 'distrobox-host-exec podman'
 alias flatpak 'distrobox-host-exec flatpak'
 alias snapper 'distrobox-host-exec snapper'
+alias rpm-ostree 'distrobox-host-exec rpm-ostree'
 
 set PATH $PATH $HOME/bin $HOME/.cargo/bin $HOME/dotfiles/bin $HOME/vevo/rest/bin $HOME/.local/bin $HOME/.local/share/gem/ruby/3.0.0/bin/
 setenv EDITOR vim
