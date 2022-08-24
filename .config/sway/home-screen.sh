@@ -8,7 +8,7 @@ swaymsg "resize grow width 35ppt"
 swaymsg "workspace 9"
 swaymsg "exec distrobox-enter -n arch -- sublime-music"
 sleep 1s
-swaymsg "exec flatpak run im.riot.Riot"
+swaymsg "exec flatpak run im.riot.Riot --enable-features=UseOzonePlatform --ozone-platform=wayland"
 sleep 2s 
 swaymsg "workspace 1"
 swaymsg reload
