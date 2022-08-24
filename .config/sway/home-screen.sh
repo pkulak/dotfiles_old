@@ -1,5 +1,5 @@
 #!/bin/bash
-swaymsg "exec firefox"
+swaymsg "exec flatpak run org.mozilla.firefox"
 swaymsg "exec alacritty"
 sleep 2s
 swaymsg "splitv"
