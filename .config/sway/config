@@ -45,21 +45,6 @@ output * bg $HOME/.config/sway/small-memory.jpg fill
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
 #
-# Environment
-#
-
-exec export TERMINAL="alacritty"
-exec export BROWSER="firefox"
-exec export EDITOR="nvim"
-exec export XDG_CURRENT_DESKTOP="sway"
-exec export XDG_SESSION_TYPE="wayland"
-exec export _JAVA_AWT_WM_NONREPARENTING=1
-
-exec export MOZ_ENABLE_WAYLAND=1
-exec export MOZ_WEBRENDER=1
-exec export MOZ_ACCELERATED=1
-
-#
 # Moving around:
 #
     # Move your focus around
@@ -279,7 +264,7 @@ bindsym $mod+Shift+Return exec $term -t "Popup Shell"
 for_window [app_id="ulauncher"] border none
 
 # Firefox
-bindsym $mod+p exec /usr/bin/firefox
+bindsym $mod+p exec flatpak run org.mozilla.firefox
 for_window [title="Firefox — Sharing Indicator"] floating enable
 for_window [title="Firefox — Sharing Indicator"] move scratchpad
 
