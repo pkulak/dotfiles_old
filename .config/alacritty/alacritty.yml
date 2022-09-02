@@ -19,12 +19,12 @@ window:
 
 font:
   normal:
-    family: DejaVu Sans Mono
+    family: Ubuntu Mono
   bold:
-    family: DejaVu Sans Mono
+    family: Ubuntu Mono
   italic:
-    family: DejaVu Sans Mono
-  size: 11.5
+    family: Ubuntu Mono
+  size: 13
 
 colors:
   primary:

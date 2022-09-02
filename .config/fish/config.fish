@@ -16,7 +16,7 @@ alias l 'exa --long --all --links --git --sort mod'
 alias bc 'bc -lq'
 alias rs 'rsync -avH --info=progress2'
 alias cleanup_packages 'set -x; sudo pacman -Rs (pacman -Qdtq)'
-alias dr 'dragon-drag-and-drop -a -x'
+alias dr 'dragon-drop -a -x'
 
 alias podman 'distrobox-host-exec podman'
 alias flatpak 'distrobox-host-exec flatpak'

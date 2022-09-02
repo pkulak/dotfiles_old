@@ -137,7 +137,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "flatpak run org.pulseaudio.pavucontrol"
     },
     "pulseaudio#source": {
         "format": "{format_source}",
@@ -155,7 +155,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "flatpak run org.pulseaudio.pavucontrol"
     },
     "custom/media": {
         "format": "{icon} {}",

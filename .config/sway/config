@@ -254,6 +254,9 @@ for_window [app_id="smerge"] floating enable
 for_window [app_id="smerge"] resize set 1440 1024
 for_window [app_id="smerge"] border pixel 7
 
+# Volume Control
+for_window [app_id="pavucontrol"] floating enable
+
 # Pop-Up Terminal
 for_window [title="Popup Shell"] floating enable
 for_window [title="Popup Shell"] resize set 1280 720
@@ -267,6 +270,9 @@ for_window [app_id="ulauncher"] border none
 bindsym $mod+p exec flatpak run org.mozilla.firefox
 for_window [title="Firefox — Sharing Indicator"] floating enable
 for_window [title="Firefox — Sharing Indicator"] move scratchpad
+
+# Silverblue Terminal
+bindsym $mod+mod1+Return exec gnome-terminal
 
 # Best to just let Steam be floating
 for_window [class="Steam"] floating enable
