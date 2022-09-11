@@ -166,7 +166,7 @@
     },
     "custom/weather": {
     	  "interval": 600,
-        "exec": "distrobox-enter --name weather -- .config/waybar/modules/weather.py"
+        "exec": ".config/waybar/modules/weather.py"
     },
     "custom/packages": {
         "interval": 86400,

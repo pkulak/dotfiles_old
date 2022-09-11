@@ -1,0 +1,13 @@
+exec swayidle -w \
+         timeout 120 'swaymsg "output * dpms off"' \
+                 resume 'swaymsg "output * dpms on"' \
+         timeout 600 'systemctl suspend' \
+                 after-resume 'swaymsg "output * dpms on" && sleep 8s && swaymsg reload'
+
+input "1:1:AT_Translated_Set_2_keyboard" {
+  xkb_options altwin:swap_lalt_lwin,caps:escape
+}
+
+exec ~/.config/sway/home-screen-x1.sh
+
+
