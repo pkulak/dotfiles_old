@@ -89,6 +89,13 @@ def parse_arguments():
 
 
 def main():
+    output = {'text': '',
+              'class': 'custom-none',
+              'alt': 'none'}
+
+    sys.stdout.write(json.dumps(output) + '\n')
+    sys.stdout.flush()
+
     arguments = parse_arguments()
 
     # Initialize logging
