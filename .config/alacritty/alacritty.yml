@@ -19,11 +19,11 @@ window:
 
 font:
   normal:
-    family: Ubuntu Mono
+    family: UbuntuMono Nerd Font
   bold:
-    family: Ubuntu Mono
+    family: UbuntuMono Nerd Font
   italic:
-    family: Ubuntu Mono
+    family: UbuntuMono Nerd Font
   size: 13
 
 colors:
