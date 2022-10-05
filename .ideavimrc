@@ -1,6 +1,7 @@
 " Searching
 set ignorecase
 set smartcase
+set sneak
 
 set relativenumber
 set number
