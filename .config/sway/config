@@ -166,6 +166,14 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# 
+# Passthrough for using anything nested
+#
+mode "passthrough" {
+    bindsym F12 mode "default"
+}
+bindsym F12 mode "passthrough"
+
 #########################
 # All my stuff below here
 #########################
