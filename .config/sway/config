@@ -10,7 +10,8 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term alacritty
+exec_always foot --server &
+set $term footclient distrobox enter arch
 
 # Menu
 set $menu wofi -a -b -I -modi drun --show drun
@@ -329,7 +330,7 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 focus_follows_mouse yes
 
 # Startup Apps
-exec .config/sway/autotiling
+# exec .config/sway/autotiling
 
 # Env vars
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
