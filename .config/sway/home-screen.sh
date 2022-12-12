@@ -1,6 +1,6 @@
 #!/bin/bash
 swaymsg "exec flatpak run org.mozilla.firefox"
-swaymsg "exec alacritty"
+swaymsg "exec footclient distrobox enter arch -- /usr/bin/fish"
 swaymsg "exec flatpak run im.riot.Riot --enable-features=UseOzonePlatform --ozone-platform=wayland"
 sleep 3s
 swaymsg "splitv"

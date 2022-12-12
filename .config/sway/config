@@ -11,7 +11,7 @@ set $right l
 
 # Your preferred terminal emulator
 exec_always foot --server &
-set $term footclient distrobox enter arch
+set $term footclient distrobox enter arch -- /usr/bin/fish
 
 # Menu
 set $menu wofi -a -b -I -modi drun --show drun
@@ -286,7 +286,7 @@ bindsym --to-code $mod+x mode $exit
 # Pop-Up Terminal
 for_window [title="Popup Shell"] floating enable
 for_window [title="Popup Shell"] resize set 1280 720
-bindsym $mod+Shift+Return exec $term -t "Popup Shell" 
+bindsym $mod+Shift+Return exec footclient -T "Popup Shell" distrobox enter arch -- /usr/bin/fish 
 
 # Launcher
 for_window [app_id="ulauncher"] border none
@@ -330,7 +330,7 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 focus_follows_mouse yes
 
 # Startup Apps
-# exec .config/sway/autotiling
+exec .config/sway/autotiling
 
 # Env vars
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
