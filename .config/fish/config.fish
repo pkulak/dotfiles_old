@@ -16,8 +16,8 @@ alias rs 'rsync -avH --info=progress2'
 alias cleanup_packages 'set -x; sudo pacman -Rs (pacman -Qdtq)'
 alias dr 'dragon-drop -a -x'
 
-alias mtvevo 'gocryptfs ~/nas/Drive/crypt/vevo ~/vevo/Notes'
-alias mtprivate 'gocryptfs ~/nas/Drive/crypt/private ~/private'
+alias mntvevo 'gocryptfs ~/nas/Drive/crypt/vevo ~/vevo/Notes'
+alias mntprivate 'gocryptfs ~/nas/Drive/crypt/private ~/private'
 
 alias podman 'distrobox-host-exec podman'
 alias flatpak 'distrobox-host-exec flatpak'

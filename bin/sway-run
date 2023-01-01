@@ -2,7 +2,7 @@
 #
 # Set this as Exec in /usr/local/share/wayland-sessions/sway.desktop
 
-export TERMINAL="alacritty"
+export TERMINAL="foot"
 export BROWSER="flatpak run org.mozilla.firefox"
 export EDITOR="nvim"
 
