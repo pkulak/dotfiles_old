@@ -1,0 +1,75 @@
+#!/usr/bin/env python
+
+import os
+import os.path
+
+mount_template = """[Unit]
+Description=Mount DESCRIPTION
+After=network-online.target
+Wants=network-online.target
+
+[Mount]
+What=//192.168.1.144/REMOTE
+Where=/var/mnt/LOCAL
+Options=credentials=/etc/samba/private/nas,iocharset=utf8,uid=phil,gid=phil
+Type=cifs
+TimeoutSec=15
+
+[Install]
+WantedBy=multi-user.target
+"""
+
+automount_template = """[Unit]
+Description=Automount DESCRIPTION
+
+[Automount]
+Where=/var/mnt/LOCAL
+TimeoutIdleSec=300
+
+[Install]
+WantedBy=remote-fs.target
+"""
+
+if not os.path.isfile("/etc/samba/private/nas"):
+    print("What's the password?")
+    creds = "username=phil\npassword={}".format(input())
+
+    with open("/etc/samba/private/nas", "x") as file:
+        print(creds, file=file)
+
+    os.system("chmod 644 /etc/samba/private/nas")
+
+mounts = [
+    {'desc': "Nas", 'remote': "home", 'local': "nas"},
+    {'desc': "Docker", 'remote': "docker", 'local': "docker"},
+    {'desc': "Music", 'remote': "music", 'local': "music"},
+    {'desc': "Public", 'remote': "public", 'local': "public"},
+    {'desc': "Swap", 'remote': "swap", 'local': "swap"},
+    {'desc': "Video", 'remote': "video", 'local': "video"}
+]
+
+for m in mounts:
+    if os.path.isdir("/var/mnt/{}".format(m['local'])):
+        print("Skipping {}".format(m['desc']))
+        continue
+
+    mount = mount_template \
+        .replace("DESCRIPTION", m['desc']) \
+        .replace("REMOTE", m['remote']) \
+        .replace("LOCAL", m['local'])
+
+    automount = automount_template \
+        .replace("DESCRIPTION", m['desc']) \
+        .replace("REMOTE", m['remote']) \
+        .replace("LOCAL", m['local'])
+
+    os.system("mkdir -p /var/mnt/{}".format(m['local']))
+
+    with open("/etc/systemd/system/var-mnt-{}.mount".format(m['local']), "x") as file:
+        print(mount, file=file)
+
+    with open("/etc/systemd/system/var-mnt-{}.automount".format(m['local']), "x") as file:
+        print(automount, file=file)
+
+    os.system("systemctl enable var-mnt-{}.automount".format(m['local']))
+    os.system("systemctl start var-mnt-{}.automount".format(m['local']))
