@@ -3,6 +3,13 @@
 import os
 import os.path
 
+mnt_dir = "/mnt"
+file_prefix = "mnt"
+
+if os.path.isdir("/var/mnt"):
+    mnt_dir = "/var/mnt"
+    file_prefix = "var-mnt"
+
 mount_template = """[Unit]
 Description=Mount DESCRIPTION
 After=network-online.target
@@ -10,25 +17,25 @@ Wants=network-online.target
 
 [Mount]
 What=//192.168.1.144/REMOTE
-Where=/var/mnt/LOCAL
+Where={}/LOCAL
 Options=credentials=/etc/samba/private/nas,iocharset=utf8,uid=phil,gid=phil
 Type=cifs
 TimeoutSec=15
 
 [Install]
 WantedBy=multi-user.target
-"""
+""".format(mnt_dir)
 
 automount_template = """[Unit]
 Description=Automount DESCRIPTION
 
 [Automount]
-Where=/var/mnt/LOCAL
+Where={}/LOCAL
 TimeoutIdleSec=300
 
 [Install]
 WantedBy=remote-fs.target
-"""
+""".format(mnt_dir)
 
 if not os.path.isfile("/etc/samba/private/nas"):
     print("What's the password?")
@@ -49,7 +56,7 @@ mounts = [
 ]
 
 for m in mounts:
-    if os.path.isdir("/var/mnt/{}".format(m['local'])):
+    if os.path.isdir("{}/{}".format(mnt_dir, m['local'])):
         print("Skipping {}".format(m['desc']))
         continue
 
@@ -63,13 +70,13 @@ for m in mounts:
         .replace("REMOTE", m['remote']) \
         .replace("LOCAL", m['local'])
 
-    os.system("mkdir -p /var/mnt/{}".format(m['local']))
+    os.system("mkdir -p {}/{}".format(mnt_dir, m['local']))
 
-    with open("/etc/systemd/system/var-mnt-{}.mount".format(m['local']), "x") as file:
+    with open("/etc/systemd/system/{}-{}.mount".format(file_prefix, m['local']), "x") as file:
         print(mount, file=file)
 
-    with open("/etc/systemd/system/var-mnt-{}.automount".format(m['local']), "x") as file:
+    with open("/etc/systemd/system/{}-{}.automount".format(file_prefix, m['local']), "x") as file:
         print(automount, file=file)
 
-    os.system("systemctl enable var-mnt-{}.automount".format(m['local']))
-    os.system("systemctl start var-mnt-{}.automount".format(m['local']))
+    os.system("systemctl enable {}-{}.automount".format(file_prefix, m['local']))
+    os.system("systemctl start {}-{}.automount".format(file_prefix, m['local']))
