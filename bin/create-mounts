@@ -37,6 +37,8 @@ TimeoutIdleSec=300
 WantedBy=remote-fs.target
 """.format(mnt_dir)
 
+os.system("mkdir -p /etc/samba/private/")
+
 if not os.path.isfile("/etc/samba/private/nas"):
     print("What's the password?")
     creds = "username=phil\npassword={}".format(input())
